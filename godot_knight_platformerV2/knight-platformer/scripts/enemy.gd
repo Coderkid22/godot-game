@@ -8,12 +8,16 @@ var direction = 1
 @onready var ray_cast_left: RayCast2D = $RayCastLeft
 @onready var ray_cast_right: RayCast2D = $RayCastRight
 @onready var ray_cast_right_down: RayCast2D = $RayCastRightDown
+@export_enum("Green", "Purple")
+var color: int
 
 #other
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
-@export var slime_color: bool = false
+@export var slime_color: bool
 
 func _ready() -> void:
+	
+	
 	if slime_color:
 		animated_sprite_2d.animation = "new_animation"
 	else:
